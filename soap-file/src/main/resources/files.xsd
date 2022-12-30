@@ -1,0 +1,30 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://soap-files/soap-files-web-service"
+           targetNamespace="http://soap-files/soap-files-web-service"
+           elementFormDefault="qualified">
+
+
+    <xs:element name="getFilesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getFilesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fileHash" type="tns:filesHashCodes"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="filesHashCodes">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="hashCode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mirat.UiController"
+            prefHeight="200.0" prefWidth="450.0" spacing="10" alignment="CENTER">
+
+    <TextField fx:id="nameTextField"/>
+    <Label fx:id="outputLabel"/>
+    <Button onAction="#loadWeatherForecast">Get file hashcode</Button>
+</VBox>
